@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Call tracking -->
+  <node pkg="tracking" type="tracking" name="tracking" respawn="false" output="screen" >
+ 	<!-- Load configurations from YAML file to parameter server -->
+   	 <rosparam file="$(find tracking)/config/estimation_params.yaml" command="load"/> 
+  </node>
+
+</launch>
